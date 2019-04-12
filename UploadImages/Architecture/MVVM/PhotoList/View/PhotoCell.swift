@@ -20,9 +20,13 @@ class PhotoCell: UITableViewCell {
         didSet {
             
             if let url = photoDetails.url {
-                activity.isHidden = true
+                activity.isHidden = false
                 lblName.text = photoDetails.name
-                ivPhoto.setImage(with: url)
+                
+                self.ivPhoto.setImage(with: url, placeholder: nil, transformer: nil, progress: nil, completion: { (image) in
+                    self.activity.isHidden = true
+                })
+                
             }
             else {
                 activity.isHidden = false
@@ -40,13 +44,15 @@ class PhotoCell: UITableViewCell {
                 
                 request.uploadProgressFinished = { () in
                     DispatchQueue.main.async {
-                        self.activity.isHidden = true
+                        
                         self.lblName.text = self.photoDetails.name
-                        self.ivPhoto.setImage(with: self.photoDetails.url)
+                        
+                        self.ivPhoto.setImage(with: self.photoDetails.url, placeholder: nil, transformer: nil, progress: nil, completion: { (image) in
+                            self.activity.isHidden = true
+                        })
                     }
                 }
             }
         }
     }
-    
 }
