@@ -15,7 +15,6 @@ class PhotoListingVC: UIViewController {
 
     @IBOutlet weak var tblPhotos: UITableView!
 
-    lazy private var imagePicker = OpalImagePickerController()
     lazy var viewModel: PhotoViewModel = {
         return PhotoViewModel()
     }()
@@ -47,9 +46,11 @@ class PhotoListingVC: UIViewController {
     
     @IBAction func btnAddNewPhotosClicked(_ sender: UIBarButtonItem) {
         
+        let imagePicker = OpalImagePickerController()
+        
         presentOpalImagePickerController(imagePicker, animated: true, select: { (assets) in
             self.viewModel.addNewPhotos(assets: assets)
-            self.imagePicker.dismiss(animated: true, completion: nil)
+            imagePicker.dismiss(animated: true, completion: nil)
         }, cancel: {
             
         })
