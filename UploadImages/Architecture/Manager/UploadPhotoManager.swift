@@ -23,8 +23,8 @@ class UploadPhotoManager: NSObject {
     
     func uploadNewImage(photoDetail: PhotoModel) {
     
-        let imagename = "\(getNextIndex())UploadImages"
-        photoDetail.name = "\(imagename).jpg"
+        let imagename = "\(getNextIndex())"
+        photoDetail.name = "\(imagename)\(fileExtention)"
         let params = CLDUploadRequestParams().setUploadPreset(preset).setPublicId(imagename).setTags(imageTag)
         
         _ = cLDCloudinary.createUploader().upload(url: photoDetail.url, uploadPreset: preset, params: params, progress: { (progress) in
@@ -40,10 +40,10 @@ class UploadPhotoManager: NSObject {
         }
     }
     
-    private func getNextIndex() -> Int {
+    private func getNextIndex() -> String {
         let index:Int = UserDefaults.standard.integer(forKey: imageKey)
         UserDefaults.standard.set(index + 1, forKey: imageKey)
-        return index + 1
+        return "\(index + 1)ImgImgUpload"
     }
     
     private func getTotalImageCount() -> Int {

@@ -31,7 +31,7 @@ class PhotoViewModel: NSObject {
                 
                 let objPhoto = PhotoModel()
                 
-                let imageName = "\(i)\(fileExtention)"
+                let imageName = "\(i)ImgUpload\(fileExtention)"
                 
                 objPhoto.name = imageName
                 objPhoto.progress = fullProgress
