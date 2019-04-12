@@ -46,9 +46,4 @@ class UploadPhotoManager: NSObject {
         return "\(index + 1)\(imagePostName)"
     }
     
-    private func getTotalImageCount() -> Int {
-        let index:Int = UserDefaults.standard.integer(forKey: imageKey)
-        return index
-    }
-    
 }
