@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+import MapleBacon
 
 class PhotoCell: UITableViewCell {
     
@@ -22,7 +22,7 @@ class PhotoCell: UITableViewCell {
             if let url = photoDetails.url {
                 activity.isHidden = true
                 lblName.text = photoDetails.name
-                //ivPhoto.kf.setImage(with: url)
+                ivPhoto.setImage(with: url)
             }
             else {
                 activity.isHidden = false
@@ -42,7 +42,7 @@ class PhotoCell: UITableViewCell {
                     DispatchQueue.main.async {
                         self.activity.isHidden = true
                         self.lblName.text = self.photoDetails.name
-                        //self.ivPhoto.kf.setImage(with: self.photoDetails.url)
+                        self.ivPhoto.setImage(with: self.photoDetails.url)
                     }
                 }
             }

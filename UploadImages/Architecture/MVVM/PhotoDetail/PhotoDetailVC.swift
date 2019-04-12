@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+import MapleBacon
 
 class PhotoDetailVC: UIViewController {
 
@@ -23,7 +23,7 @@ class PhotoDetailVC: UIViewController {
     
     private func setPhotoDetails() {
         self.title = photoDetails.name
-        ivPhoto.kf.setImage(with: photoDetails.url)
+        ivPhoto.setImage(with: photoDetails.url)
     }
     
 }

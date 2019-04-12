@@ -2,27 +2,27 @@ PODS:
   - Alamofire (4.8.1)
   - Cloudinary (2.6.1):
     - Alamofire (~> 4.8.1)
-  - Kingfisher (5.3.0)
+  - MapleBacon (5.2.1)
   - OpalImagePicker (2.0.0)
 
 DEPENDENCIES:
   - Cloudinary (~> 2.0)
-  - Kingfisher (~> 5.0)
+  - MapleBacon
   - OpalImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Cloudinary
-    - Kingfisher
+    - MapleBacon
     - OpalImagePicker
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Cloudinary: a13a1b1137dc1ab625aa9d2d0c4b56171bb971a9
-  Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
+  MapleBacon: 14b8df09def7f24956ca334d353a5836667fd5e8
   OpalImagePicker: efc91612ef5b3849314801f68fddc26200da9435
 
-PODFILE CHECKSUM: 70bde7d15dbe6ff0fef72ae71827de0fba1e5282
+PODFILE CHECKSUM: 5e5a6f1ae0d025a917f701b45f4f920120edf466
 
 COCOAPODS: 1.6.0

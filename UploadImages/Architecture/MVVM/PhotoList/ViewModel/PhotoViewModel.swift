@@ -26,17 +26,19 @@ class PhotoViewModel: NSObject {
         
         let totalImage = UserDefaults.standard.integer(forKey: imageKey)
         
-        for i in (1...totalImage).reversed() {
-            
-            let objPhoto = PhotoModel()
-            
-            let imageName = "\(i)\(fileExtention)"
-            
-            objPhoto.name = imageName
-            objPhoto.progress = fullProgress
-            objPhoto.url = URL(string: "\(serverImagePath)\(imageName)")
-            objPhoto.uploaderRequest = nil
-            self.arrPhotos.append(objPhoto)
+        if(totalImage > 0) {
+            for i in (1...totalImage).reversed() {
+                
+                let objPhoto = PhotoModel()
+                
+                let imageName = "\(i)\(fileExtention)"
+                
+                objPhoto.name = imageName
+                objPhoto.progress = fullProgress
+                objPhoto.url = URL(string: "\(serverImagePath)\(imageName)")
+                objPhoto.uploaderRequest = nil
+                self.arrPhotos.append(objPhoto)
+            }
         }
     }
     

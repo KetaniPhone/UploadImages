@@ -11,7 +11,7 @@ let imageTag            = "UploadImages"
 let cloudName           = "dp0bt65ka"
 let imageKey            = "PhotoName"
 let preset              = "xqs19dco"
-let fileExtention       = ".jpg"
+let fileExtention       = "UploadImages.jpg"
 let fullProgress        = "100"
 let emptyProgress       = "0.0"
 

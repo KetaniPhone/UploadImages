@@ -23,8 +23,8 @@ class UploadPhotoManager: NSObject {
     
     func uploadNewImage(photoDetail: PhotoModel) {
     
-        let imagename = "\(getNextIndex())"
-        photoDetail.name = "\(imagename)\(fileExtention)"
+        let imagename = "\(getNextIndex())UploadImages"
+        photoDetail.name = "\(imagename).jpg"
         let params = CLDUploadRequestParams().setUploadPreset(preset).setPublicId(imagename).setTags(imageTag)
         
         _ = cLDCloudinary.createUploader().upload(url: photoDetail.url, uploadPreset: preset, params: params, progress: { (progress) in
