@@ -43,7 +43,7 @@ class UploadPhotoManager: NSObject {
     private func getNextIndex() -> String {
         let index:Int = UserDefaults.standard.integer(forKey: imageKey)
         UserDefaults.standard.set(index + 1, forKey: imageKey)
-        return "\(index + 1)ImgImgUpload"
+        return "\(index + 1)\(imagePostName)"
     }
     
     private func getTotalImageCount() -> Int {

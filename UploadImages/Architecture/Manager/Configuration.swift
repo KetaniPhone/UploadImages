@@ -8,6 +8,7 @@
 
 let serverImagePath     = "https://res.cloudinary.com/dp0bt65ka/image/upload/v1554963583/"
 let imageTag            = "UploadImages"
+let imagePostName       = "_MyImage"
 let cloudName           = "dp0bt65ka"
 let imageKey            = "PhotoName"
 let preset              = "xqs19dco"
